@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  *{
+  padding: 0;
+  margin: 0;
+
+}
+body{
+     
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),    url(back.webp);
+
+               opacity: 0.9;
+     
+}
+
+h2{
+  color: white;
+  font-size: 70px;
+  text-align: center;
+  text-shadow: 13px 12px 23px black;
+}
+
+.hello{
+  display: flex;
+ border: 1px black;
+ padding: 4px;
+
+}
+#gel{
+  font-size: 40px;
+  text-align: center;
+    color: white;
+  text-shadow: 2px 3px 4px black;
+
+}
+
+.ik{
+  color: white;
+}
+.clickme{
+  background-color: red;
+  color: white;
+  font-size: 56px;
+    border-radius: 20px;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    cursor: pointer;
+     transition:   all 1.3s infinite;
+     transition-delay: 0.1s;
+     
+}
+.clickme:hover{
+  background-color: blue;
+  font-size: 63px;
+
+
+}
+.reset{
+  background-color:yellow;
+  color: black;
+  font-size: 56px;
+    border-radius: 18px;
+    position: absolute;
+    top: 60%;
+    left: 41%;
+    cursor: pointer;
+   transition: 0.3s linear infinite;
+
+}
+       .reset:hover{
+        background-color:white;
+           font-size: 63px;
+        color: black;
+       }
+     
+
+
+
+
+.foot{
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    height: 30vh;
+    top: 100%;
+
+ 
+  }
+  .foot footer h4 p{
+    color: white;
+    text-align: center;
+    position: absolute;
+    bottom: 0%;
+    left: 30%;
+    font-size: 24px;
+    
+  }
+  .social {
+
+    position: absolute;
+    left: 34%;
+  }  
+  .social a  {
+    font-size: 34px;
+    word-spacing: 40px;
+     width: 100px;
+  margin: 35px;
+  font-size: 35px;
+  line-height: 100px;
+  color: white;
+}
+
+.social a i {
+  transition: all 0.3s linear;
+}
+   .social a i:hover{
+    font-size: 45px;
+
+
+   }
+   .social a img {
+  transition: all 0.3s linear;
+}
+   .social a img:hover{
+   height: 45px;
+
+   }
+  
+         .note{
+          position: absolute;
+          top: 70%;
+          
+          font-size: 34px;
+          background-color: black;
+
+          color: white;
+         }
+
+
+
+   @media only screen and (max-width: 700px){
+          
+          h2{
+            font-size: 36px;
+          }
+   
+                   #gel{
+                    font-size: 20px;
+                  }       
+     
+         
+
+               .clickme{
+                font-size: 35px;
+               }
+         .clickme:hover{
+          font-size: 40px;
+         }
+         .reset {
+          font-size: 35px;
+
+         }
+
+       .reset:hover{
+        font-size: 40px;
+       }
+
+   body{
+    background-size: cover;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),    url(back.webp);
+    height: 100vh;
+   }   
+  .foot{
+    
+    background-color: black;
+ 
+  }
+
+.social a{
+  font-size: 19px;
+
+}
+
+.social:hover{
+  font-size: 30px;
+}
+
+
+.social a img{
+  height: 19px;
+  position: absolute;
+  top: 45%;
+}
+
+
+
+</style>
+	<title>calusre</title>
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+         <div class="aask">
+           <h2>your age in hours</h2>
+            <div class="hello"></div>
+       <div id="ik"></div>
+          <div id="gel"></div>
+        <div><button class="clickme" onclick="ageDays()">click me</button>
+        </div>
+        <div><button class="reset" onclick="chIn()" id="to"> reset</button>
+         </div>
+          </div>
+
+
+
+      <div class="note">
+        <p>
+          this works like your age year is - by this yea
+          then it multiplied by the hours in a year
+          it can be false.
+          but gives as approx.value of your hour
+
+        </p>
+
+
+
+      </div>
+
+
+
+  <div class="foot">
+<footer><h4><p>website coded by dheerajkochar(all rights reserved)2020</p></h4>
+  <div class="social">
+<a href="  https://www.facebook.com/kusumparaskochar"> <i class="fa fa-facebook"></i></a>
+<a href="https://www.youtube.com/channel/UCevHxE86YX9IHGfmm4Ub-lw?view_as=subscriber"> <i class="fa fa-youtube"></i></a>
+<a href="#"> <i class="fa fa-instagram"></i></a>
+<a href="mailto:kochatdheeraj@gmail.com"><img src="g.jpg"height="39px"></a>
+</div>
+
+
+
+
+
+</body>
+<script>
+	function ageDays() {
+		// body...
+		var yar =prompt("in which year you born");
+          var hell =(2020-yar)*8670;
+          var he   =(2020-yar)*365;
+          var h1 = document.createElement('h1');
+        
+          var textAnswer =document.createTextNode( 'your age'+hell +'hours'+'approx.');
+        
+          h1.setAttribute('Id','hell',);
+          h1.appendChild(textAnswer,);
+          document.getElementById('gel').appendChild(h1);
+          
+
+
+
+}
+
+  function chIn(){
+  	var eea =location.reload();
+  	document.getElementById('to');
+  }
+
+
+
+
+
+
+</script>
+</html>
